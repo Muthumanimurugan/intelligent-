@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intelligent-automation</title>
+    <link rel="stylesheet" href="intelligent.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-AiPY61+5JptzK/U+3VLZOZEfL+yMsK6T6AZumK2Ok9iM3pLxoa+BrFq2T5ZBDZbw" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
+</head>
+<body>
+   
+  
+     
+<nav class="navbar navbar-expand-lg navbar-light fixed-top"
+style="background-color: white; height: auto; box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.05); margin-bottom: 1px !important;">
+<div class="container">
+    <a class="navbar-brand" href="#" style="padding: 0;">
+        <img src="intelligent-images/Logo (2).png" alt="Logo" class="nav-logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="border: none;"></span>
+    </button>
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a class="navbar-brand" href="#" style="padding: 0;">
+                <img src="intelligent-images/Logo (2).png" alt="Logo" class="nav-logo-sidebar">
+            </a>
+            <span class="cancel-icon" onclick="closeSidebar()">&times;</span>
+        </div>
+        <ul class="navbar-nav" id="nav-sidebar-ul">
+            <li class="nav-item">
+                <a class="nav-link d-flex justify-content-between align-items-center" id="nav-a" href="#"
+                    onclick="toggleDropdown('about')">About <i id="about-icon"
+                        class="fas bi-chevron-down about-icon"></i></a>
+                <div id="about-dropdown" class="dropdown-menu" aria-labelledby="navbarDropdownAbout"
+                    style="display: none;">
+                    <a class="dropdown-item" href="#">JustLogix</a>
+                    <a class="dropdown-item" href="#">Skein Technologies</a>
+                    <a class="dropdown-item" href="#">Management</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Product</a>
+                </div>
+            </li>
+            <hr class="footer-line" style="margin-top: 0px !important;">
+            <li class="nav-item" style="margin-top: -20px !important;">
+                <a class="nav-link d-flex justify-content-between align-items-center" id="nav-a" href="#"
+                    onclick="toggleDropdown('services')">Services <i id="services-icon"
+                        class="fas bi-chevron-down"></i></a>
+                <div id="services-dropdown" class="dropdown-menu" aria-labelledby="navbarDropdownServices"
+                    style="display: none;">
+                    <a class="dropdown-item" href="../Webapp/webapp.html">WebApp</a>
+                    <a class="dropdown-item" href="#">Home</a>
+                    <a class="dropdown-item" href="#">Management</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Product</a>
+                </div>
+            </li>
+            <hr class="footer-line" style="margin-top: 0px !important;">
+            <li class="nav-item" style="margin-top: -20px !important;">
+                <a class="nav-link d-flex justify-content-between align-items-center" id="nav-a" href="#"
+                    onclick="toggleDropdown('Technologies')">Technologies <i id="Technologies-icon"
+                        class="fas bi-chevron-down"></i></a>
+
+                <div id="Technologies-dropdown" class="dropdown-menu"
+                    aria-labelledby="navbarDropdownTechnologies" style="display: none;">
+                    <a class="dropdown-item" href="../Webapp/webapp.html">WebApp</a>
+                    <a class="dropdown-item" href="#">Home</a>
+                    <a class="dropdown-item" href="#">Management</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Product</a>
+                </div>
+            </li>
+            <hr class="footer-line" style="margin-top: 0px !important;">
+
+            <li class="nav-item" style="margin-top: -20px !important;">
+                <a class="nav-link d-flex justify-content-between align-items-center" id="nav-a" href="#"
+                    onclick="toggleDropdown('Industries')">Industries <i id="Industries-icon"
+                        class="fas bi-chevron-down"></i></a>
+                <div id="Industries-dropdown" class="dropdown-menu" aria-labelledby="navbarDropdownIndustries"
+                    style="display: none;">
+                    <a class="dropdown-item" href="../Webapp/webapp.html">WebApp</a>
+                    <a class="dropdown-item" href="#">Home</a>
+                    <a class="dropdown-item" href="#">Management</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Product</a>
+                </div>
+            </li>
+            <hr class="footer-line" style="margin-top: 0px !important;">
+
+            <li class="nav-item" style="margin-top: -20px !important;">
+                <a class="nav-link d-flex justify-content-between align-items-center" id="nav-a" href="#"
+                    onclick="toggleDropdown('Portfolios')">Portfolios
+                   
+                </a>
+          
+            </li>
+            <hr class="footer-line" style="margin-top: 0px !important;">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><button type="button" class="navbar-button">Get in
+                        Touch</button></a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto"
+            style="font-weight: 400; font-family: 'Source Sans Pro', sans-serif; gap: 10px !important;">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSolutions" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownSolutions">
+                    <a class="dropdown-item" href="../Webapp/webapp.html">WebApp</a>
+                    <a class="dropdown-item" href="#">Home</a>
+                    <a class="dropdown-item" href="#">Management</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Product</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSolutions" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownSolutions">
+                    <a class="dropdown-item" href="../Webapp/webapp.html">WebApp</a>
+                    <a class="dropdown-item" href="#">Home</a>
+                    <a class="dropdown-item" href="#">Management</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Product</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownIndustries" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Solutions</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownIndustries">
+                    <a class="dropdown-item" href="../Webapp/webapp.html">WebApp</a>
+                    <a class="dropdown-item" href="#">Home</a>
+                    <a class="dropdown-item" href="#">Management</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Product</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTechnologies" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Industries</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownTechnologies">
+                    <a class="dropdown-item" href="../Webapp/webapp.html">WebApp</a>
+                    <a class="dropdown-item" href="#">Home</a>
+                    <a class="dropdown-item" href="#">Management</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Product</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Technologies</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownPortfolio">
+                    <a class="dropdown-item" href="../Webapp/webapp.html">WebApp</a>
+                    <a class="dropdown-item" href="#">Home</a>
+                    <a class="dropdown-item" href="#">Management</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Product</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown" style="margin-top: 1px !important; color: #676968 !important;">
+                <a class="nav-link dropdown-togglee" href="#" id="navbarDropdownPortfolio" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio</a>
+         
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><button type="button" class="navbar_button">Get in
+                        Touch</button></a>
+            </li>
+        </ul>
+    </div>
+</div>
+</nav>
+
+<script>
+// Function to open sidebar 
+function openSidebar() {
+    document.querySelector('.sidebar').classList.add('active');
+    document.querySelector('body').classList.add('sidebar-open');
+}
+
+// Function to close sidebar
+function closeSidebar() {
+    document.querySelector('.sidebar').classList.remove('active');
+    document.querySelector('body').classList.remove('sidebar-open');
+}
+
+function toggleDropdown(dropdownId) {
+    var dropdown = document.getElementById(dropdownId + '-dropdown');
+    var icon = document.getElementById(dropdownId + '-icon');
+
+    // Close all dropdowns except the one being opened
+    var dropdowns = document.querySelectorAll('.dropdown-menu');
+    dropdowns.forEach(function (d) {
+        if (d.id !== dropdownId + '-dropdown' && d.style.display === 'block') {
+            d.style.display = 'none';
+            var associatedIcon = document.getElementById(d.id.replace('-dropdown', '-icon'));
+            associatedIcon.classList.remove('bi-chevron-up');
+            associatedIcon.classList.add('bi-chevron-down');
+        }
+    });
+
+    // Toggle the display and icon class of the current dropdown
+    if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+        icon.classList.remove('bi-chevron-up');
+        icon.classList.add('bi-chevron-down');
+    } else {
+        dropdown.style.display = 'block';
+        icon.classList.remove('bi-chevron-down');
+        icon.classList.add('bi-chevron-up');
+    }
+}
+
+
+// Toggle sidebar on navbar toggler click
+document.querySelector('.navbar-toggler').addEventListener('click', function () {
+    if (document.querySelector('.sidebar').classList.contains('active')) {
+        closeSidebar(); // Close sidebar if already open
+    } else {
+        openSidebar(); // Open sidebar if closed
+    }
+});
+</script>
+   
+
+
+    
+ <!-- section first -->
+
+<div class="container intelligentautomationfirst">
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="intelligentautomationfirst-header">
+                Intelligent Automation Development services
+            </h1>
+            <p class="intelligentautomationfirst-para1">
+                "Leverage cutting-edge technology and expert consultancy to drive your business forward in the digital age."
+            </p>
+            <p class="intelligentautomationfirst-para2">
+                Develop a scalable, dynamic, and feature-rich application with our Angular js development company. Our skilled experts are proficient in providing engaging and effective Angular development services with a proven record of success.
+
+            </p>
+          
+            <div class="intelligentautomationfirst-button">
+                <button class="btn btn-primary">Discover Our Service</button>
+            </div>
+        </div>
+        <div class="col-md-6 intelligentautomationfirst-image1">
+           
+            <img src="intelligent-images/Intelligent Automation Developement..png" alt="Intelligent Automation" class="img-fluid">
+        </div>
+    </div>
+</div> 
+
+ <!-- section 2  web --> 
+       
+ <div class="container Intelligent-Automation-services consulting-service-responsive1" >
+    <div class="container">
+        <div>
+            <h1 class="Intelligent-Automation-heading">Intelligent Automation Development <span style="color: #2CA068;">Services</span></h1>
+            <br/>
+        </div>
+
+        <div>
+            <div class="row overflow-auto Automation-services">
+                <div class="Intelligent-Automation-services-part-1">
+                    <div class="one">
+                        <p data-content="ci-content" class="active-tab">CRM</p>
+                    </div>
+                    <div class="one">
+                        <p data-content="built-content">Low-code automation</p>
+                    </div>
+                    <div class="one">
+                        <p data-content="automation-content">Business process management</p>
+                    </div>
+                    <div class="one">
+                        <p data-content="implementation-content">customer experience</p>
+                    </div>
+                    <div class="one">
+                        <p data-content="containerization-content">Cognitive automation for RPA</p>
+                    </div>
+                    <div class="one">
+                        <p data-content="security-content">IDP and chatbots</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <div class="hidden-content">
+            <div id="ci-content" class="content visible">
+                <div class="row" >
+                   
+
+                    <div class="col Automation-dropdown ">
+                        <p>
+                          Embark on a journey of digital excellence with our top-tier ReactJS development services. At JustLogix, we're not just developers; we're innovators and problem-solvers dedicated to elevating your online presence. From crafting bespoke web applications to revitalizing legacy systems with ReactJS, our services are a blend of technical mastery and creative finesse. 
+
+
+                        </p>
+                        <p>
+                            Dive into our world of ReactJS expertise and discover solutions that are not just built, but ingeniously engineered to propel your business forward in the digital realm. Let's redefine the boundaries of what's possible together. Embark on a journey of digital excellence with our top-tier ReactJS development services
+                        </p>
+
+                        <div class="Automation-dropdown-btn1">
+                            <button type="button" >Explore More Services</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="intelligent-images/CRM.png" alt="CI-CD pipeline" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+            <div id="built-content" class="content">
+                <div class="row" >
+                   
+
+                    <div class="col Automation-dropdown ">
+                        <p>
+                          Embark on a journey of digital excellence with our top-tier ReactJS development services. At JustLogix, we're not just developers; we're innovators and problem-solvers dedicated to elevating your online presence. From crafting bespoke web applications to revitalizing legacy systems with ReactJS, our services are a blend of technical mastery and creative finesse. 
+
+
+                        </p>
+                        <p>
+                            Dive into our world of ReactJS expertise and discover solutions that are not just built, but ingeniously engineered to propel your business forward in the digital realm. Let's redefine the boundaries of what's possible together. Embark on a journey of digital excellence with our top-tier ReactJS development services
+                        </p>
+
+                        <div class="Automation-dropdown-btn1">
+                            <button type="button" >Explore More Services</button>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <img src="intelligent-images/CRM.png" alt="CI-CD pipeline" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+            <div id="automation-content" class="content">
+                <div class="row" >
+                    
+
+                    <div class="col Automation-dropdown ">
+                        <p>
+                          Embark on a journey of digital excellence with our top-tier ReactJS development services. At JustLogix, we're not just developers; we're innovators and problem-solvers dedicated to elevating your online presence. From crafting bespoke web applications to revitalizing legacy systems with ReactJS, our services are a blend of technical mastery and creative finesse. 
+
+
+                        </p>
+                        <p>
+                            Dive into our world of ReactJS expertise and discover solutions that are not just built, but ingeniously engineered to propel your business forward in the digital realm. Let's redefine the boundaries of what's possible together. Embark on a journey of digital excellence with our top-tier ReactJS development services
+                        </p>
+
+                        <div class="Automation-dropdown-btn1">
+                            <button type="button" >Explore More Services</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="intelligent-images/CRM.png" alt="CI-CD pipeline" class="img-fluid" />
+                    </div>
+                </div>
+                
+            </div>
+            <div id="implementation-content" class="content">
+                <div class="row" >
+                    
+
+                    <div class="col Automation-dropdown ">
+                        <p>
+                          Embark on a journey of digital excellence with our top-tier ReactJS development services. At JustLogix, we're not just developers; we're innovators and problem-solvers dedicated to elevating your online presence. From crafting bespoke web applications to revitalizing legacy systems with ReactJS, our services are a blend of technical mastery and creative finesse. 
+
+
+                        </p>
+                        <p>
+                            Dive into our world of ReactJS expertise and discover solutions that are not just built, but ingeniously engineered to propel your business forward in the digital realm. Let's redefine the boundaries of what's possible together. Embark on a journey of digital excellence with our top-tier ReactJS development services
+                        </p>
+
+                        <div class="Automation-dropdown-btn1">
+                            <button type="button" >Explore More Services</button>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <img src="intelligent-images/CRM.png" alt="CI-CD pipeline" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+            <div id="containerization-content" class="content">
+                <div class="row" >
+                    
+
+                    <div class="col Automation-dropdown ">
+                        <p>
+                          Embark on a journey of digital excellence with our top-tier ReactJS development services. At JustLogix, we're not just developers; we're innovators and problem-solvers dedicated to elevating your online presence. From crafting bespoke web applications to revitalizing legacy systems with ReactJS, our services are a blend of technical mastery and creative finesse. 
+
+
+                        </p>
+                        <p>
+                            Dive into our world of ReactJS expertise and discover solutions that are not just built, but ingeniously engineered to propel your business forward in the digital realm. Let's redefine the boundaries of what's possible together. Embark on a journey of digital excellence with our top-tier ReactJS development services
+                        </p>
+
+                        <div class="Automation-dropdown-btn1">
+                            <button type="button" >Explore More Services</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="intelligent-images/CRM.png" alt="CI-CD pipeline" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+            <div id="security-content" class="content">
+                <div class="row" >
+                   
+
+                    <div class="col Automation-dropdown ">
+                        <p>
+                          Embark on a journey of digital excellence with our top-tier ReactJS development services. At JustLogix, we're not just developers; we're innovators and problem-solvers dedicated to elevating your online presence. From crafting bespoke web applications to revitalizing legacy systems with ReactJS, our services are a blend of technical mastery and creative finesse. 
+
+
+                        </p>
+                        <p>
+                            Dive into our world of ReactJS expertise and discover solutions that are not just built, but ingeniously engineered to propel your business forward in the digital realm. Let's redefine the boundaries of what's possible together. Embark on a journey of digital excellence with our top-tier ReactJS development services
+                        </p>
+
+                        <div class="Automation-dropdown-btn1">
+                            <button type="button" >Explore More Services</button>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <img src="intelligent-images/CRM.png" alt="CI-CD pipeline" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+
+        
+    </div>
+</div>         
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll('.one p[data-content]');
+    const contents = document.querySelectorAll('.hidden-content .content');
+
+    function hideAllContents() {
+        contents.forEach(content => {
+            content.classList.remove('visible');
+        });
+    }
+
+    function deactivateAllTabs() {
+        tabs.forEach(tab => {
+            tab.classList.remove('active-tab');
+        });
+    }
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+            deactivateAllTabs();
+            hideAllContents();
+            const contentId = this.getAttribute('data-content');
+            document.getElementById(contentId).classList.add('visible');
+            this.classList.add('active-tab');
+        });
+    });
+});
+</script>
+
+ <!-- section 2  mobile --> 
+<div class="container consulting-service-responsive">
+    <div >
+
+        <div class="consulting-responsve-header">
+            <h1>Intelligent Automation Development <br><span style="color: #2CA068;">Services</span></h1>
+        </div>
+
+        <div class="container">
+            <div class="accordion">
+                <div class="accordion-item dcs-item ">
+                    <div class="accordion-header dcs-header active">
+                        <span>CI/CD</span>
+                        <button class="accordion-toggle dcs-toggle"><i class="arrow down"></i></button>
+                    </div>
+                    <div class="accordion-content dcs-content " style="display: block;" >
+                        <img src="intelligent-images/CRM.png" alt="CI/CD" class="img-fluid consulting-service-responsive-image1" />
+                        
+                        <p>
+                            Embark on a journey of digital excellence with our top-tier ReactJS development services. At JustLogix, we're not just developers; we are the  innovators and problem-solvers dedicated to elevating your online presence. From crafting bespoke web applications to revitalizing legacy systems with ReactJS, our services are a blend of technical mastery and creative finesse. 
+                        </p>
+                        <p>
+                            Dive into our world of ReactJS expertise and discover solutions that are not just built, but ingeniously engineered to propel your business forward in the digital realm. Let's redefine the boundaries of what's possible together. Embark on a journey of digital excellence with our top-tier ReactJS development services.
+                        </p>
+
+                        <div class="consulting-responsive-btn1">
+                            <button type="button" >Explore More Services</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item dcs-item">
+                    <div class="accordion-header dcs-header">
+                        <span>Built-In Quality</span>
+                        <button class="accordion-toggle dcs-toggle"><i class="arrow down"></i></button>
+                    </div>
+                  <div class="accordion-content dcs-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+                </div>
+
+                <div class="accordion-item dcs-item">
+                    <div class="accordion-header dcs-header">
+                        <span>DevOps Automation</span>
+                        <button class="accordion-toggle dcs-toggle"><i class="arrow down"></i></button>
+                    </div>
+                    <div class="accordion-content dcs-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+                </div>
+
+                <div class="accordion-item dcs-item">
+                    <div class="accordion-header dcs-header">
+                        <span>DevOps Implementation</span>
+                        <button class="accordion-toggle dcs-toggle"><i class="arrow down" ></i></button>
+                    </div>
+                    <div class="accordion-content dcs-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+                </div>
+
+                <div class="accordion-item dcs-item">
+                    <div class="accordion-header dcs-header">
+                        <span>DevOps Containerization</span>
+                        <button class="accordion-toggle dcs-toggle"><i class="arrow down"></i></button>
+                    </div>
+                    <div class="accordion-content dcs-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+                </div>
+
+                <div class="accordion-item dcs-item">
+                    <div class="accordion-header dcs-header">
+                        <span>Security & Governance</span>
+                        <button class="accordion-toggle dcs-toggle"><i class="arrow down"></i></button>
+                     </div>
+                    <div class="accordion-content dcs-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+ <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+const accordionItems = document.querySelectorAll('.dcs-header');
+
+accordionItems.forEach(item => {
+    item.addEventListener('click', function() {
+        const accordionContent1 = this.nextElementSibling;
+        const accordionToggle1 = this.querySelector('.dcs-toggle .arrow');
+
+        // Close all other accordion items
+        accordionItems.forEach(otherItem => {
+            const otherAccordionContent = otherItem.nextElementSibling;
+            const otherAccordionToggle = otherItem.querySelector('.dcs-toggle .arrow');
+            console.log("muthu 1")
+            if (otherItem !== item) {
+                console.log("deena 333")
+                otherAccordionContent.style.display = 'none';
+                otherAccordionToggle.classList.remove('up');
+                otherAccordionToggle.classList.add('down');
+                otherItem.classList.remove('active'); // Remove active class
+            }
+        });
+        console.log("muthu 2")
+        // Toggle content visibility for the clicked item
+        if (accordionContent1.style.display === 'block') {
+            accordionContent1.style.display = 'none';
+            accordionToggle1.classList.remove('up');
+            accordionToggle1.classList.add('down');
+            item.classList.remove('active'); // Remove active class
+        } else {
+            accordionContent1.style.display = 'block';
+            accordionToggle1.classList.remove('down');
+            accordionToggle1.classList.add('up');
+            item.classList.add('active'); // Add active class
+        }
+    });
+});
+});
+</script> 
+
+<!-- section 3 -->
+<div class="container expertise-business-adaptable-container ">
+    <div class="expertise-business-adaptable">
+    <div class="section-4">
+        <div class="cloud-expertise-business">
+            <h1 class="expertise-business-adaptable-head">Our Cloud Expertise to make <span style="color: #2CA068;">Businesses <span class="Adaptable">Adaptable</span></span></h1>
+            <br/>
+            <p >At JustLogix, our mastery of modern technologies is the foundation upon which we build our innovative solutions. Our team is adept at a wide range of platforms and frameworks, ensuring versatility and excellence in every project we undertake.</p>
+        </div>
+        <div>
+            <div class="row overflow-auto expertise-businness-heading">
+                <div class="col-12 business-adaptable-part-1 d-flex flex-nowrap">
+                    <div class="two">
+                        <p data-content="cloud-content" class="active-content">Cloud Providers</p>
+                    </div>
+                    <div class="two">
+                        <p data-content="webservers-content">Web Servers</p>
+                    </div>
+                    <div class="two">
+                        <p data-content="Configuration-manage-content">Configuration Management</p>
+                    </div>
+                    <div class="two">
+                        <p data-content="database-all-content">Database</p>
+                    </div>
+                    <div class="two">
+                        <p data-content="automation-all-content">Automation</p>
+                    </div>
+                    <div class="two">
+                        <p data-content="Scripting-language-content">Scripting Languages</p>
+                    </div>
+                </div>
+                <div class="single-line">
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="hide-all-content">
+            <div id="cloud-content" class="content-below visible-content">
+                <div>
+                    <div class="expertise-image-container">
+                        <img src="intelligent-images/Asure.png" alt="Asure">
+                        <img src="intelligent-images/AWS.png" alt="AWS">
+                        <img src="intelligent-images/Google Cloud.png" alt="Google cloud">
+                        <img src="intelligent-images/Pivotal.png" alt="Pivotal">
+                        <img src="intelligent-images/Rackspace.png" alt="Rackspace">
+                        <img src="intelligent-images/OpenStack.png" alt="OpenStack">
+                    </div>
+                </div>
+            </div>
+            <div id="webservers-content" class="content-below">
+                <div>
+                    <div class="expertise-image-container">
+                        <img src="intelligent-images/Asure.png" alt="Asure">
+                        <img src="intelligent-images/AWS.png" alt="AWS">
+                        <img src="intelligent-images/Google Cloud.png" alt="Google cloud">
+                        <img src="intelligent-images/Pivotal.png" alt="Pivotal">
+                        <img src="intelligent-images/Rackspace.png" alt="Rackspace">
+                        <img src="intelligent-images/OpenStack.png" alt="OpenStack">
+                    </div>
+                </div>
+            </div>
+            <div id="Configuration-manage-content" class="content-below">
+                <div>
+                    <div class="expertise-image-container">
+                        <img src="intelligent-images/Asure.png" alt="Asure">
+                        <img src="intelligent-images/AWS.png" alt="AWS">
+                        <img src="intelligent-images/Google Cloud.png" alt="Google cloud">
+                        <img src="intelligent-images/Pivotal.png" alt="Pivotal">
+                        <img src="intelligent-images/Rackspace.png" alt="Rackspace">
+                        <img src="intelligent-images/OpenStack.png" alt="OpenStack">
+                    </div>
+                </div>
+            </div>
+            <div id="database-all-content" class="content-below">
+                <div>
+                    <div class="expertise-image-container">
+                        <img src="intelligent-images/Asure.png" alt="Asure">
+                        <img src="intelligent-images/AWS.png" alt="AWS">
+                        <img src="intelligent-images/Google Cloud.png" alt="Google cloud">
+                        <img src="intelligent-images/Pivotal.png" alt="Pivotal">
+                        <img src="intelligent-images/Rackspace.png" alt="Rackspace">
+                        <img src="intelligent-images/OpenStack.png" alt="OpenStack">
+                    </div>
+                </div>
+            </div>
+            <div id="automation-all-content" class="content-below">
+                <div>
+                    <div class="expertise-image-container">
+                        <img src="intelligent-images/Asure.png" alt="Asure">
+                        <img src="intelligent-images/AWS.png" alt="AWS">
+                        <img src="intelligent-images/Google Cloud.png" alt="Google cloud">
+                        <img src="intelligent-images/Pivotal.png" alt="Pivotal">
+                        <img src="intelligent-images/Rackspace.png" alt="Rackspace">
+                        <img src="intelligent-images/OpenStack.png" alt="OpenStack">
+                    </div>
+                </div>
+            </div>
+            <div id="Scripting-language-content" class="content-below">
+                <div>
+                    <div class="expertise-image-container">
+                        <img src="intelligent-images/Asure.png" alt="Asure">
+                        <img src="intelligent-images/AWS.png" alt="AWS">
+                        <img src="intelligent-images/Google Cloud.png" alt="Google cloud">
+                        <img src="intelligent-images/Pivotal.png" alt="Pivotal">
+                        <img src="intelligent-images/Rackspace.png" alt="Rackspace">
+                        <img src="intelligent-images/OpenStack.png" alt="OpenStack">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-4-button">
+        <a href="#">All technologies we work with &rarr; </a>
+    </div>
+</div> 
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll('.two p[data-content]');
+        const contents = document.querySelectorAll('.hide-all-content .content-below');
+        function hideAllContents() {
+            contents.forEach(content => {
+                content.classList.remove('visible-content');
+            });
+        }
+        function deactivateAllTabs() {
+            tabs.forEach(tab => {
+                tab.classList.remove('active-content');
+            });
+        }
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                deactivateAllTabs();
+                hideAllContents();
+                const contentId = this.getAttribute('data-content');
+                document.getElementById(contentId).classList.add('visible-content');
+                this.classList.add('active-content');
+            });
+        });
+    });
+</script>
+
+<!-- section 4 -->
+<div class="container why-choose-us">
+    <div class="why-choose-us-head">
+        <h1>Why <span style="color: #2CA068;">Choose Us</span></h1>
+    </div>
+
+    <div class="row why-choose-us-row1">
+        <div class="col-md-6 col-sm-12 why-choose-us-col1">
+            <h4>Championing Innovation, Delivering Excellence</h4>
+
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12 why-choose-us-col2">
+            <div class="row why-choose-us-row-2">
+                <div class="col-md-6 col-sm-12">
+                    <h4>Greater visibility</h4>
+                    <p>
+                        Only an integrated cloud-based security stack is capable of providing the centralized visibility of cloud resources and data that is vital for defending against breaches and other potential threats. 
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <h4>Centralized security</h4>
+                    <p>
+                        Cloud security allows you to consolidate protection of cloud-based networks for streamlined, continuous monitoring and analysis of numerous devices, endpoints, and systems. 
+                    </p>
+                </div>
+               
+            </div>
+
+            <div class="row why-choose-us-row-2-part2">
+                <div class="col-md-6 col-sm-12">
+                    <h4>Data protection</h4>
+                    <p>
+                        The best cloud computing providers will provide data security by design, offering strong access controls, encryption for data at rest and in transit, and data loss prevention.                    
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <h4>Reduced cost</h4>
+                    <p>
+                        With cloud security, you don’t have to pay for dedicated hardware to upgrade your security or use valuable resources to handle security updates and configurations.                     
+                    </p>
+                </div>
+               
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<!-- section-5 -->
+ 
+<div class="container">
+    <div class="IntelligentAutomation-benefit">
+      <h1>Benefits of<span> Intelligent Automation</span> </h1>
+      <div class="row">
+        <div class="col-md-6">
+            <div class="card IntelligentAutomation-benefitcard1">
+                <div class="row no-gutters d-flex align-items-center">
+                    <div class="col-1 col-md-1 IntelligentAutomation-benefit-iconimage">
+                        <div class="img-container">
+                            <img src="./intelligent-images//Group (2).png" alt="tick" class="img-fluid IntelligentAutomation-benefit-image1 ">
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-10 IntelligentAutomation-benefit-content">
+                        <div class="IntelligentAutomation-benefit-card-body">
+                            <h5 class="IntelligentAutomation-benefit-card-title">Customer Software Development</h5>
+                            <p class="IntelligentAutomation-benefitcard-text">Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quisni porro id suscipit quam qui excepturi
+                                dolor ut quasini voluptatem! Sed molestias animi ad quos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card IntelligentAutomation-benefitcard1">
+                <div class="row no-gutters d-flex align-items-center">
+                    <div class="col-1 col-md-1 IntelligentAutomation-benefit-iconimage">
+                        <div class="img-container">
+                            <img src="./intelligent-images//Group (2).png" alt="tick" class="img-fluid IntelligentAutomation-benefit-image1">
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-10 IntelligentAutomation-benefit-content">
+                        <div class="IntelligentAutomation-benefit-card-body">
+                            <h5 class="IntelligentAutomation-benefit-card-title">Accessibility & Mobility</h5>
+                            <p class="IntelligentAutomation-benefitcard-text">Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quisni porro id suscipit quam qui excepturi
+                                dolor ut quasini voluptatem! Sed molestias animi ad quos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <div class="card IntelligentAutomation-benefitcard1">
+            <div class="row no-gutters d-flex align-items-center">
+                <div class="col-1 col-md-1 IntelligentAutomation-benefit-iconimage">
+                    <div class="img-container">
+                        <img src="./intelligent-images//Group (2).png" alt="tick" class="img-fluid IntelligentAutomation-benefit-image1">
+                    </div>
+                </div>
+                <div class="col-10 col-md-10 IntelligentAutomation-benefit-content">
+                    <div class="IntelligentAutomation-benefit-card-body">
+                        <h5 class="IntelligentAutomation-benefit-card-title">Cost  Efficient</h5>
+                        <p class="IntelligentAutomation-benefitcard-text">Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quisni porro id suscipit quam qui excepturi
+                            dolor ut quasini voluptatem! Sed molestias animi ad quos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card IntelligentAutomation-benefitcard1">
+                <div class="row no-gutters d-flex align-items-center">
+                    <div class="col-1 col-md-1 IntelligentAutomation-benefit-iconimage">
+                        <div class="img-container">
+                            <img src="./intelligent-images//Group (2).png" alt="tick" class="img-fluid IntelligentAutomation-benefit-image1">
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-10 IntelligentAutomation-benefit-content">
+                        <div class="IntelligentAutomation-benefit-card-body">
+                            <h5 class="IntelligentAutomation-benefit-card-title">Development Flexibility</h5>
+                            <p class="IntelligentAutomation-benefitcard-text">Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quisni porro id suscipit quam qui excepturi
+                                dolor ut quasini voluptatem! Sed molestias animi ad quos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card IntelligentAutomation-benefitcard1">
+                <div class="row no-gutters d-flex align-items-center">
+                    <div class="col-1 col-md-1 IntelligentAutomation-benefit-iconimage">
+                        <div class="img-container">
+                            <img src="./intelligent-images//Group (2).png" alt="tick" class="img-fluid IntelligentAutomation-benefit-image1">
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-10 IntelligentAutomation-benefit-content">
+                        <div class="IntelligentAutomation-benefit-card-body">
+                            <h5 class="IntelligentAutomation-benefit-card-title">Faster Delivery </h5>
+                            <p class="IntelligentAutomation-benefitcard-text">Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quisni porro id suscipit quam qui excepturi
+                                dolor ut quasini voluptatem! Sed molestias animi ad quos</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="card IntelligentAutomation-benefitcard1">
+                <div class="row no-gutters d-flex align-items-center">
+                    <div class="col-1 col-md-1 IntelligentAutomation-benefit-iconimage">
+                        <div class="img-container">
+                            <img src="./intelligent-images//Group (2).png" alt="tick" class="img-fluid IntelligentAutomation-benefit-image1">
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-10 IntelligentAutomation-benefit-content">
+                        <div class="IntelligentAutomation-benefit-card-body">
+                            <h5 class="IntelligentAutomation-benefit-card-title">Customer Support</h5>
+                            <p class="IntelligentAutomation-benefitcard-text">Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quisni porro id suscipit quam qui excepturi
+                                dolor ut quasini voluptatem! Sed molestias animi ad quos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+<!-- section 6 -->
+ 
+<div style="background:#248B970D">
+<div class="container" >
+    <div class="row IntelligentAutomation-Industry">
+<div class="col-md-6 IntelligentAutomation-Industry-part1">
+    <h1>Industry <Span>Served</Span></h1>
+    <p>At JustLogix, we specialize in providing cutting-edge IT solutions across a multitude of industries, fostering innovation, growth, and digital transformation worldwide.Duis aute irure dolor in reprehenderit in volup tate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+         Duis aute irure dolor in reprehenderit in 
+         voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur.</p>
+</div>
+<div class="col-md-6">
+<img src="intelligent-images/Industry service.png" alt="Industry service" class="IntelligentAutomation-Industry-image img-fluid">
+<img src="intelligent-images/industry service mobile.png" alt="industry service mobile" class="IntelligentAutomation-Industry-image1 img-fluid">
+</div>
+    </div>
+
+</div>
+
+</div>
+
+<!-- section 7 -->
+     
+<div class="container mt-5" >
+    <div class="intelligent-emerging">
+        <div class="row intelligent-emerging-head">
+           <h1>Emerging <span>Technologies</span></h1>
+        </div>
+        <div id="emergingTechnologiesCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row intelligent-card-row">
+                        <div class="col-md-6 intelligent-col-1">
+                            <div class="card intelligent-emerging-card intelligent-emerging-card-align-1">
+                                <div class="card-body">
+                                    <h5 class="card-title"><img src="intelligent-images/AI Icon.png" class="intelligent-emerging-card-img"><h5 class="intelligent-emerging-card-heading">Artificial Intelligence</h5></h5>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="intelligent-emerging-card-para">Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis porro id suscipit quam qui excepturi dolor ut quasi.dolor ut quasi voluptatem! Est deserunt animi qui pariatur atque non nisi sint eum laudantium quam aut minus debitis quo consequatur maxime!  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card intelligent-emerging-card intelligent-emerging-card-align-1">
+                                <div class="card-body">
+                                    <h5 class="card-title"><img src="intelligent-images/Vector (3).png" class="intelligent-emerging-card-img"><h5 class="intelligent-emerging-card-heading">Chat bots</h5></h5>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="intelligent-emerging-card-para">Lorem ipsum dolor sit amet. 
+                                                Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis porro
+                                                 id suscipit quam qui excepturi dolor ut quasi.dolor ut quasi voluptatem! 
+                                                 \Est deserunt animi qui pariatur atque non nisi sint eum laudantium quam
+                                                  aut minus debitis quo consequatur maxime!  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 intelligent-col-2">
+                            <div class="card intelligent-emerging-card intelligent-emerging-card-align-2">
+                                <div class="card-body">
+                                    <h5 class="card-title"><img src="intelligent-images/IoT icon.png" alt="" class="intelligent-emerging-card-img"><h5 class="intelligent-emerging-card-heading">Internet of Things (IoT)</h5></h5>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="intelligent-emerging-card-para">Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis porro id suscipit quam qui excepturi dolor ut quasi.dolor ut quasi voluptatem! Est deserunt animi qui pariatur atque non nisi sint eum laudantium quam aut minus debitis quo consequatur maxime!  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card intelligent-emerging-card intelligent-emerging-card-align-2">
+                                <div class="card-body">
+                                    <h5 class="card-title"><img src="intelligent-images/VR icon.png" class="intelligent-emerging-card-img"><h5 class="intelligent-emerging-card-heading">Virtual Reality (VR)</h5></h5>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="intelligent-emerging-card-para">Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis porro id suscipit quam qui excepturi dolor ut quasi.dolor ut quasi voluptatem! Est deserunt animi qui pariatur atque non nisi sint eum laudantium quam aut minus debitis quo consequatur maxime!  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row intelligent-card-row">
+                        <div class="col-md-6 intelligent-col-1">
+                            <div class="card intelligent-emerging-card intelligent-emerging-card-align-1">
+                                <div class="card-body">
+                                    <h5 class="card-title"><img src="intelligent-images/AI Icon.png" class="intelligent-emerging-card-img"><h5 class="intelligent-emerging-card-heading">Artificial Intelligence</h5></h5>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="intelligent-emerging-card-para">Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis porro id suscipit quam qui excepturi dolor ut quasi.dolor ut quasi voluptatem! Est deserunt animi qui pariatur atque non nisi sint eum laudantium quam aut minus debitis quo consequatur maxime!  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card intelligent-emerging-card intelligent-emerging-card-align-1">
+                                <div class="card-body">
+                                    <h5 class="card-title"><img src="intelligent-images/Vector (3).png" class="intelligent-emerging-card-img"><h5 class="intelligent-emerging-card-heading">Chatbots</h5></h5>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="intelligent-emerging-card-para">Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis porro id suscipit quam qui excepturi dolor ut quasi.dolor ut quasi voluptatem! Est deserunt animi qui pariatur atque non nisi sint eum laudantium quam aut minus debitis quo consequatur maxime!  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 intelligent-col-2">
+                            <div class="card intelligent-emerging-card intelligent-emerging-card-align-2">
+                                <div class="card-body">
+                                    <h5 class="card-title"><img src="intelligent-images/IoT icon.png" alt="" class="intelligent-emerging-card-img"><h5 class="intelligent-emerging-card-heading">Internet of Things (IoT)</h5></h5>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="intelligent-emerging-card-para">Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis porro id suscipit quam qui excepturi dolor ut quasi.dolor ut quasi voluptatem! Est deserunt animi qui pariatur atque non nisi sint eum laudantium quam aut minus debitis quo consequatur maxime!  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card intelligent-emerging-card intelligent-emerging-card-align-2">
+                                <div class="card-body">
+                                    <h5 class="card-title"><img src="intelligent-images/VR icon.png" class="intelligent-emerging-card-img"><h5 class="intelligent-emerging-card-heading">Virtual Reality (VR)</h5></h5>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="intelligent-emerging-card-para">Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis porro id suscipit quam qui excepturi dolor ut quasi.dolor ut quasi voluptatem! Est deserunt animi qui pariatur atque non nisi sint eum laudantium quam aut minus debitis quo consequatur maxime!  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+           <div class="icons-con">
+                <i class="bi1 bi-chevron-left intelligent-emerging-chevron-left" id="bi-chevron-left"></i>
+                <i class="bi1 bi-chevron-right intelligent-emerging-chevron-right" id="bi-chevron-right" ></i>    
+            </div>  
+        </div>   
+    </div>  
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const leftIcon = document.getElementById('bi-chevron-left');
+            const rightIcon = document.getElementById('bi-chevron-right');
+      
+
+            let leftIconClicked = false; 
+            let rightIconClicked = false; 
+            leftIcon.addEventListener('click', function() {
+                if (!leftIconClicked) {
+                    this.classList.add('clicked');
+                    leftIconClicked = true;
+                    rightIcon.classList.remove('clicked');
+                    rightIconClicked = false;
+                }
+                swipeLeft(); 
+            });
+        
+            rightIcon.addEventListener('click', function() {
+                if (!rightIconClicked) {
+                    this.classList.add('clicked');
+                    rightIconClicked = true;
+                    leftIcon.classList.remove('clicked');
+                    leftIconClicked = false;
+                }
+                swipeRight();  
+            });
+        
+             
+            function swipeLeft() {
+                $('#emergingTechnologiesCarousel').carousel('prev');
+            }
+        
+             
+            function swipeRight() {
+                $('#emergingTechnologiesCarousel').carousel('next');
+            }
+        });
+        
+    </script>
+ 
+
+
+<!-- section 8 -->
+  
+  <!-- important    -->
+
+
+
+
+
+
+
+
+
+  <div class="container IntelligentAutomation-casestudies">
+    <h1>
+        OurCase<span>Studies</span>
+    </h1>
+
+    <div id="caseStudiesCarousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card IntelligentAutomation-casestudies-card">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="https://s3-alpha-sig.figma.com/img/e5c1/8976/4864473ff9d43e73fa75a541f0827ac1?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=m~j05K9z~EY2mzqsLM51WMGx84960uqKQSbhwPv5IxeCY7C96sW1F9Hwor7y3CZoRaZK~NjQIf~~s3qj4voYHC9gPncBrV1q3HoDp-B~FJhV-79l~VjcSV8QAEhyiz~Qo5PcdOoBPEOIHWqf6TfPWTOnuez1EpUqvc2BCbHvSgOg6Pgd-uAAVcnNqd46USuhfUdyKAc8TWsrGWc5ipb0fLBsCR1pyWmILpb37Qsv6zQCOnWeVc2p3cFRpKu5SLKm4810RlNHnrsHiV7wKzVPL7xeyuyfzPaknANPejxbjkSKCdN0pbvmC6yOQoka0hLwukth4dt4sBttyfHEdZKVWg__" alt="Another Image" class="IntelligentAutomation-casestudies-image">
+                        </div>
+                        <div class="col-md-6">
+                            <!-- <div class="icons-con-1">
+                                <i class="b2 bi-chevron-left intelligent-emerging-chevron-left-2" id="bi-left-1"></i>
+                                <i class="b2 bi-chevron-right intelligent-emerging-chevron-right-2" id="bi-right-1"></i>
+                            </div> -->
+                            <p class="IntelligentAutomation-casestudies-p1">Computer Vision</p>
+                            <p class="IntelligentAutomation-casestudies-p2">
+                                Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut Quis porro id suscipit quam qui excepturi dolor ut quasi 
+                                voluptatem! Sed mol stias animi ad quos modi qui libero laborum ab omnis magnam.
+                                 Est deserunt animi qui pariatur atque non nisi sint eum laudantium. Est deserunt animi qui pariatur atque non nisi sint eum laudantium. Est deserunt animi qui pariatur atque non nisi sint eum laudantium. Est deserunt animi qui pariatur atque non nisi sint eum laudantium. Est deserunt animi qui pariatur atque non nisi sint eum laudantium.
+                                 Est deserunt animi qui pariatur atque non nisi sint eum laudantium! 
+                            </p>
+                            <div class="IntelligentAutomation-casestudies-button">
+                                <button class="btn btn-primary">View More &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="carousel-item">
+                <div class="card IntelligentAutomation-casestudies-card">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="https://s3-alpha-sig.figma.com/img/e5c1/8976/4864473ff9d43e73fa75a541f0827ac1?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=m~j05K9z~EY2mzqsLM51WMGx84960uqKQSbhwPv5IxeCY7C96sW1F9Hwor7y3CZoRaZK~NjQIf~~s3qj4voYHC9gPncBrV1q3HoDp-B~FJhV-79l~VjcSV8QAEhyiz~Qo5PcdOoBPEOIHWqf6TfPWTOnuez1EpUqvc2BCbHvSgOg6Pgd-uAAVcnNqd46USuhfUdyKAc8TWsrGWc5ipb0fLBsCR1pyWmILpb37Qsv6zQCOnWeVc2p3cFRpKu5SLKm4810RlNHnrsHiV7wKzVPL7xeyuyfzPaknANPejxbjkSKCdN0pbvmC6yOQoka0hLwukth4dt4sBttyfHEdZKVWg__" alt="Another Image" class="IntelligentAutomation-casestudies-image">
+                        </div>
+                        <div class="col-md-6">
+                             <!-- <div class="icons-con-1">
+                                <i class="b2 bi-chevron-left intelligent-emerging-chevron-left-2" id="bi-left-1"></i>
+                                <i class="b2 bi-chevron-right intelligent-emerging-chevron-right-2" id="bi-right-1"></i>
+                            </div>  -->
+                            <p class="IntelligentAutomation-casestudies-p1">Another Case Study</p>
+                            <p class="IntelligentAutomation-casestudies-p2">
+                                Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut Quis porro id suscipit quam qui excepturi dolor ut quasi voluptatem! Sed mol stias animi ad quos modi qui libero laborum ab omnis magnam. Est deserunt animi qui pariatur atque non nisi sint eum laudantium. Est deserunt animi qui pariatur atque non nisi sint eum laudantium. Est deserunt animi qui pariatur atque non nisi sint eum laudantium. Est deserunt animi qui pariatur atque non nisi sint eum laudantium. Est deserunt animi qui pariatur atque non nisi sint eum laudantium. Est deserunt animi qui pariatur atque non nisi sint eum laudantium! 
+                            </p>
+                            <div class="IntelligentAutomation-casestudies-button">
+                                <button class="btn btn-primary">View More &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div class="icons-con-1 IntelligentAutomation-button">
+        <i class="b2 bi-chevron-left intelligent-emerging-chevron-left-2" id="bi-left-1"></i>
+        <i class="b2 bi-chevron-right intelligent-emerging-chevron-right-2" id="bi-right-1"></i>
+    </div>
+</div>
+
+
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let leftIconClicked = false; 
+        let rightIconClicked = false; 
+
+        function swipeLeft() {
+            $('#caseStudiesCarousel').carousel('prev');
+        }
+
+        function swipeRight() {
+            $('#caseStudiesCarousel').carousel('next');
+        }
+
+        document.querySelectorAll('.intelligent-emerging-chevron-left-2').forEach(item => {
+            item.addEventListener('click', function() {
+                if (!leftIconClicked) {
+                    this.classList.add('clicked1');
+                    leftIconClicked = true;
+                    document.querySelectorAll('.intelligent-emerging-chevron-right-2').forEach(rightItem => {
+                        rightItem.classList.remove('clicked1');
+                    });
+                    rightIconClicked = false;
+                }
+                swipeLeft();
+            });
+        });
+
+        document.querySelectorAll('.intelligent-emerging-chevron-right-2').forEach(item => {
+            item.addEventListener('click', function() {
+                if (!rightIconClicked) {
+                    this.classList.add('clicked1');
+                    rightIconClicked = true;
+                    document.querySelectorAll('.intelligent-emerging-chevron-left-2').forEach(leftItem => {
+                        leftItem.classList.remove('clicked1');
+                    });
+                    leftIconClicked = false;
+                }
+                swipeRight();
+            });
+        });
+    });
+</script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 9 section -->
+
+
+<div class="container our-testimonials">
+    <div class="our-testimonials-heading">
+        <h1>Oru <span style="color: #2CA068;">Testimonials</span></h1>
+    </div>
+   
+
+    <div id="slide1" class="container test-1 about-session active-test">
+        <div class="our-testimonials-section9 active-btn">
+            <div class="our-testimonials-part1">
+                <p>
+                    “Justlogix has been able to ramp up their teams to meet our needs, even for our new development initiatives. The code they delivered was of high quality, and overall, the communication was very good.They delivered a quality product at a reasonable price.”
+                </p>
+            </div>
+    
+            <div class="our-testimonials-part2">
+                <img src="intelligent-images/Profile testimonials.png" alt="Our Testimonials Proifle">
+                <h6 >Joseph Franklo</h6>
+                <p>Director, Techinsiration LLC</p>
+            </div>
+    
+        </div>
+    </div>
+
+    <div  id="slide2" class="container test-1 about-session">
+        <div class="our-testimonials-section9">
+            <div class="our-testimonials-part1">
+                <p>
+                    “Justlogix has been able to ramp up their teams to meet our needs, even for our new development initiatives. The code they delivered was of high quality, and overall, the communication was very good.They delivered a quality product at a reasonable price.”
+                </p>
+            </div>
+    
+            <div class="our-testimonials-part2">
+                <img src="intelligent-images/Profile testimonials.png" alt="Our Testimonials Proifle">
+                <h6>Ben Affleck</h6>
+                <p>Director, Microsoft LLC</p>
+            </div>
+    
+        </div>
+    </div>
+
+    <div id="slide3" class="container test-1 about-session">
+       <div class="our-testimonials-section9">
+    <div class="our-testimonials-part1">
+        <p>
+            “Justlogix has been able to ramp up their teams to meet our needs, even for our new development initiatives. The code they delivered was of high quality, and overall, the communication was very good.They delivered a quality product at a reasonable price.”
+        </p>
+    </div>
+
+    <div class="our-testimonials-part2">
+        <img src="intelligent-images/Profile testimonials.png" alt="Our Testimonials Proifle">
+        <h6>Henry Cavill</h6>
+        <p>Director, Google LLC</p>
+    </div>
+
+        </div>
+    </div>
+
+    <div id="slide4" class="container test-1 about-session">
+        <div class="our-testimonials-section9">
+     <div class="our-testimonials-part1">
+         <p>
+             “Justlogix has been able to ramp up their teams to meet our needs, even for our new development initiatives. The code they delivered was of high quality, and overall, the communication was very good.They delivered a quality product at a reasonable price.”
+         </p>
+     </div>
+ 
+     <div class="our-testimonials-part2">
+         <img src="intelligent-images/Profile testimonials.png" alt="Our Testimonials Proifle">
+         <h6>Ryan Renolds</h6>
+         <p>Director, Microsoft LLC</p>
+     </div>
+ 
+         </div>
+     </div>
+
+      <div class="our-testimonials-btn">
+        <button onclick="moveCarouseltest(0)" class="testimonial-btn active-test-btn"></button>
+        <button onclick="moveCarouseltest(1)" class="testimonial-btn"></button>
+        <button onclick="moveCarouseltest(2)" class="testimonial-btn"></button>
+        <button onclick="moveCarouseltest(3)" class="testimonial-btn"></button>
+    </div>
+</div>
+
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll('.test-1');
+const buttons = document.querySelectorAll('.testimonial-btn');
+
+function showSlide(n) {
+    slides.forEach((slide) => {
+        slide.style.display = 'none';
+    });
+    slides[n].style.display = 'block';
+    setActiveButton(n);
+}
+
+function setActiveButton(n) {
+    buttons.forEach((button, index) => {
+        if (index === n) {
+            button.classList.add('active-test-btn');
+        } else {
+            button.classList.remove('active-test-btn');
+        }
+    });
+}
+
+function moveCarouseltest(n) {
+    showSlide(n);
+    slideIndex = n;
+}
+
+function nextSlide() {
+    slideIndex++;
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    }
+    showSlide(slideIndex);
+}
+
+function prevSlide() {
+    slideIndex--;
+    if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+    }
+    showSlide(slideIndex);
+}
+
+// Automatic slideshow
+let slideshowInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+// Swipe functionality for touch devices
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener('touchstart', (event) => {
+    touchStartX = event.touches[0].clientX;
+});
+
+document.addEventListener('touchend', (event) => {
+    touchEndX = event.changedTouches[0].clientX;
+    handleGesture();
+});
+
+function handleGesture() {
+    if (touchEndX < touchStartX) {
+        nextSlide();
+    } else if (touchEndX > touchStartX) {
+        prevSlide();
+    }
+}
+</script> 
+
+<!--News & Blogs-->
+
+ 
+<div class="about_session10_maindiv">
+    <div class="container">
+        <h1 class="about_session10_para1">
+        News and <span class="about_session10_span">Blogs</span>
+        </h1>
+  
+
+        <div class="container news-1 about-session active-blog">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="position-relative">
+                        <img class="img-fluid about_session10_image" src="intelligent-images/VR Technology.png" alt="Medical">
+                        <div class="circle" style="background-color: #AA6BE0;">
+                            <div class="circle-content">
+                                <h6 class="mb-0">17</h6>
+                                <p class="mb-0">Jan/24</p>
+                            </div>
+                        </div>
+                    </div>
+         
+                    <p class="about-session__title">
+                        The Future of AR/VR Technology
+                    </p>
+                    <div class="d-flex">
+                        <img class="img-fluid about-session__profile" src="intelligent-images/Profile testimonials.png" alt="profile">
+                        <div class="align-self-end ml-2">
+                            <p class="about-session__profile-name">
+                                Kingston Prince
+                            </p>
+                        </div>
+              
+                    </div>
+                </div>
+      
+     
+   
+                <div class="col-lg-4 col-md-6">
+                    <div class="position-relative">
+                        <img class="img-fluid about_session10_image" src="intelligent-images/Internet of Things.png" alt="Medical">
+                        <div class="circle" style="background: linear-gradient(133.26deg, #89CAFF 19.39%, #3F9AE4 85.45%);">
+                            <div class="circle-content">
+                                <h6 class="mb-0">6</h6>
+                                <p class="mb-0">Feb/24</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <p class="about-session__title">
+                        The Future of Cross-Chain Swaps
+                    </p>
+                    <div class="d-flex">
+                        <img class="img-fluid about-session__profile" src="intelligent-images/Profile testimonials.png" alt="profile">
+                        <div class="align-self-end ml-2">
+                            <p class="about-session__profile-name">
+                                Kingston Prince
+                            </p>
+                        </div>
+                
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="position-relative">
+                        <img class="img-fluid about_session10_image" src="intelligent-images/ChatBot Integration.png" alt="Medical">
+                        <div class="circle" style="background: linear-gradient(133.26deg, #F5CA9D 19.39%, #C59975 85.45%);">
+                            <div class="circle-content">
+                                <h6 class="mb-0">21</h6>
+                                <p class="mb-0">Feb/24</p>
+                            </div>
+                        </div>
+                    </div>
+          
+                    <p class="about-session__title">
+                        The Future of Cross-Chain Swaps
+                    </p>
+                    <div class="d-flex">
+                        <img class="img-fluid about-session__profile" src="intelligent-images/Profile testimonials.png" alt="profile">
+                        <div class="align-self-end ml-2">
+                            <p class="about-session__profile-name">
+                                Kingston Prince
+                            </p>
+                        </div>
+          
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+    </div>
+</div>
+
+
+
+<!-- Frequentyl Asked Questions -->
+
+
+<div class="container">
+    <div class="section13layout">
+        <div class="section13header">
+                <h1 class="section13heading">Frequently Asked <span>Questions <img src="./webdev image/Rectangle 81.png"/></span></h1>
+            </div>
+            <div class="container">
+            <div class="accordion">
+              <div class="accordion-item">
+                <div class="accordion-header header1">
+                  <span>Can’t find any answer for your question?</span>
+                   <button class="accordion-toggle"><i class="arrow down"></i></button>
+              </div>
+                  <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-header header1">
+                  <span>Can’t find any answer for your question?</span>
+                   <button class="accordion-toggle"><i class="arrow down"></i></button>
+              </div>
+                  <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-header header1">
+                  <span>Can’t find any answer for your question?</span>
+                   <button class="accordion-toggle"><i class="arrow down"></i></button>
+              </div>
+                <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header header1">
+                <span>Can’t find any answer for your question?</span>
+                 <button class="accordion-toggle"><i class="arrow down"></i></button>
+            </div>
+              <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header header1">
+              <span>Can’t find any answer for your question?</span>
+               <button class="accordion-toggle"><i class="arrow down"></i></button>
+          </div>
+            <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header header1">
+            <span>Can’t find any answer for your question?</span>
+             <button class="accordion-toggle"><i class="arrow down"></i></button>
+        </div>
+          <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header header1">
+          <span>Can’t find any answer for your question?</span>
+           <button class="accordion-toggle"><i class="arrow down"></i></button>
+      </div>
+        <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+    </div>
+          </div>
+        </div>
+  </div>
+  </div> 
+   <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const accordionHeaders = document.querySelectorAll('accordion-header, .header1');
+    let currentOpenAccordion = null;
+    
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', function () {
+            const accordionItem = this.parentElement;
+            const accordionContent = accordionItem.querySelector('.accordion-content');
+            const accordionToggle = accordionItem.querySelector('.accordion-toggle').querySelector('.arrow');
+             console.log("deena 1")
+            // If there's an open accordion and it's not the current one, close it
+            if (currentOpenAccordion && currentOpenAccordion !== accordionItem) {
+                const openContent = currentOpenAccordion.querySelector('.accordion-content');
+                const openToggle = currentOpenAccordion.querySelector('.accordion-toggle .arrow');
+                console.log("deena 2222")
+                openContent.style.display = 'none';
+                openToggle.classList.remove('up');
+                openToggle.classList.add('down');
+    
+                // Remove active class and reset styles for the previously open accordion header
+                currentOpenAccordion.querySelector('.accordion-header, .header1').classList.remove('active');
+                openToggle.classList.remove('white');
+                currentOpenAccordion.querySelector('.accordion-header, .header1').classList.remove('white');
+            }
+    
+            // Toggle the current accordion content and arrow
+            if (accordionContent.style.display === 'block') {
+                accordionContent.style.display = 'none';
+                accordionToggle.classList.remove('up');
+                accordionToggle.classList.add('down');
+                this.classList.remove('active');
+                accordionToggle.classList.remove('white');
+                this.classList.remove('white');
+    
+                currentOpenAccordion = null;
+            } else {
+                accordionContent.style.display = 'block';
+                accordionToggle.classList.remove('down');
+                accordionToggle.classList.add('up');
+                this.classList.add('active');
+                accordionToggle.classList.add('white');
+                this.classList.add('white');
+    
+                currentOpenAccordion = accordionItem;
+            }
+        });
+    });
+});
+</script> 
+
+ 
+
+
+<!-- Form - Get in touch -->
+
+<div class="form-background">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="form-head">Get in <span class="form-touch">Touch</span></div>
+          <h5 class="form-top">Want to start a project with us?</h5>
+          <p class="form-paragraph">Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis porro id suscipit quam qui excepturi dolor ut quasi voluptatem! Sed mol stias animi ad quos modi qui libero laborum ab omnis magnam.</p>
+          <div class="row">
+            <div class="col-md-1">
+              <div class="call-icon"><i class="bi bi-telephone"></i></div>
+              <div class="green-line"></div>
+              <div class="vertical-line"></div>
+            </div>
+            <div class="col-md-11">
+                <div class="step-content">
+                    <h5>STEP 1</h5>
+                    <h6>Join a discovery call</h6>
+                    <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis porro id suscipit </p>
+                </div>
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col-md-1">
+                <div class="call-icon"><i class="bi bi-person"></i></div>
+                <div class="green-line"></div>
+                <div class="vertical-line2"></div>
+            </div>
+            <div class="col-md-11">
+                <div class="step-content">
+                    <h5>STEP 2</h5>
+                    <h6>Get top 1% application on your team</h6>
+                    <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis porro id suscipit </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                <div class="call-icon"><i class="bi bi-check2"></i></div>
+            </div>
+            <div class="col-md-11">
+                <div class="step-content">
+                    <h5>STEP 3</h5>
+                    <h6>Get started and track performance.</h6>
+                    <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis porro id suscipit </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-6 form-content2">
+          <img src="intelligent-images/Ellipse 32 (2).png" class="circleimage">
+          <div class="form-container">
+            <h3 class="form-text">Send Your <span class="form-touch">Idea's</span></h3>
+            <div class="form-line"></div>
+            <form>
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="firstname">First Name<span class="form-star">*</span></label>
+                  <input id="firstname" type="text" class="form-control" name="first name">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="lastname">Last Name<span class="form-star">*</span></label>
+                  <input id="lastname" type="text" class="form-control" name="last name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email<span class="form-star">*</span></label>
+                <input id="email" type="email" class="form-control" name="email">
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" class="form-control" name="message" style="height: 100px;"></textarea>
+              </div>
+              <button type="submit" class="form-button">Start Your Project</button>
+            </form>
+          </div>
+          <img src="intelligent-images/scribble 1 (2).png" class="arrowimage">
+        </div>
+      </div>
+    </div>
+  </div>    
+  <!-- footer -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row footer-columns justify-content-between">
+        <div id="footer-column" class="col-md-2 footer-column footer-about">
+          <h3 id="footer-head" class="mb-3 d-flex justify-content-between align-items-center"> 
+            About<i class="bi bi-chevron-down footer-arrow-icon"></i>
+          </h3>
+          <ul id="footer-menu" class="footer-menu">
+            <li>Who We Are</li>
+            <li>Career</li>
+            <li>How We Work</li>
+            <li>Blogs</li>
+            <li>Get in Touch</li>
+          </ul>
+          <hr class="footer-line">
+        </div>
+        <div id="footer-column" class="col-md-2 footer-column footer-services">
+          <h3 id="footer-head" class="mb-3 d-flex justify-content-between align-items-center"> 
+            Services<i class="bi bi-chevron-down footer-arrow-icon"></i>
+          </h3>
+          <ul id="footer-menu" class="footer-menu">
+            <li>Web App Development</li>
+            <li>Mobile App Development</li>
+            <li>Software Development</li>
+            <li>Support & Maintenance</li>
+            <li>QA Testing</li>
+            <li>DevOps</li>
+            <li>Blog</li>
+            <li>Cloud Services</li>
+          </ul>
+          <hr class="footer-line">
+        </div>
+        <div id="footer-column" class="col-md-2 footer-column footer-technologies">
+          <h3 id="footer-head" class="mb-3 d-flex justify-content-between align-items-center"> 
+            Technologies<i class="bi bi-chevron-down footer-arrow-icon"></i>
+          </h3>
+          <ul id="footer-menu" class="footer-menu">
+            <li>Blockchain</li>
+            <li>Artificial Intelligence</li>
+            <li>AR & VR</li>
+            <li>Cloud Computing</li>
+            <li>Internet of Things</li>
+            <li>more...</li>
+          </ul>
+          <hr class="footer-line">
+        </div>
+        <div id="footer-column" class="col-md-2 footer-column footer-industries">
+          <h3 id="footer-head" class="mb-3 d-flex justify-content-between align-items-center"> 
+            Industries<i class="bi bi-chevron-down footer-arrow-icon"></i>
+          </h3>
+          <ul id="footer-menu" class="footer-menu">
+            <li>FinTech</li>
+            <li>Banking</li>
+            <li>Retail</li>
+            <li>Manufacturing</li>
+            <li>Insurance</li>
+            <li>Real Estate</li>
+            <li>Travel & Tourism</li>
+            <li>Education</li>
+          </ul>
+          <hr class="footer-line">
+        </div>
+        <div id="footer-column" class="col-md-2 footer-column footer-portfolios">
+          <h3 id="footer-head" class="mb-3 d-flex justify-content-between align-items-center"> 
+            Portfolios<i class="bi bi-chevron-down footer-arrow-icon"></i>
+          </h3>
+          <ul id="footer-menu" class="footer-menu">
+            <li>Kid's World</li>
+            <li>Resto</li>
+          </ul>
+          <hr class="footer-line">
+        </div>
+      </div>
+    </div>
+      <hr class="footer-border">
+      <div class="container">
+        <div class="row justify-content-between footer-bottom-content">
+            <div class="col-md-auto">
+                <p class="mb-0 footer-text1">
+                    <a href="#1">Privacy Policy </a>| <a href="#2">Terms & Conditions </a>|<a href="#3"> Sitemap</a>
+                </p>
+            </div>
+            <div class="col-md-auto ">
+                <p class="footer-text2"><span class="copysymbol"><img src="intelligent-images/Group 97 (2).png" alt=""></span><span class="copysymbol_text">2024 All Rights Reserved - justlogix.com</span></p>
+            </div>
+            <div class="col-md-auto d-flex justify-content-center">
+                <div class="footer-text3">
+                    <a href="#" class="btn btn-link icon"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="btn btn-link icon"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="btn btn-link icon"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="btn btn-link icon"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div> 
+  </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Get all footer columns
+    var footerColumns = document.querySelectorAll('.footer-column');
+  
+    // Loop through each footer column
+    footerColumns.forEach(function(column) {
+        // Find the h3 element
+        var h3 = column.querySelector('h3');
+  
+        // Find the ul element
+        var menu = column.querySelector('.footer-menu');
+  
+        // Add click event listener to the header
+        h3.addEventListener('click', function() {
+            // Close all other menus
+            footerColumns.forEach(function(otherColumn) {
+                if (otherColumn !== column) {
+                    otherColumn.querySelector('.footer-menu').classList.remove('active-footer');
+                    otherColumn.querySelector('i').classList.remove('bi-chevron-up');
+                    otherColumn.querySelector('i').classList.add('bi-chevron-down');
+                }
+            });
+  
+            // Toggle the active class on the menu when the header is clicked
+            menu.classList.toggle('active-footer');
+  
+            // Toggle the icon between chevron-down and chevron-up
+            h3.querySelector('i').classList.toggle('bi-chevron-down');
+            h3.querySelector('i').classList.toggle('bi-chevron-up');
+        });
+    });
+  });
+  </script>
+
+  
+
+<!-- Footer -->  
+
+
+<!-- Bootstrap JS and dependencies --> 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
