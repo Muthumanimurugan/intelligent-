@@ -140,7 +140,7 @@ margin-bottom: 20px !important;
     text-align: center;
     border-radius: 5px;
     border: none;
-    width: 200px;
+    width: auto !important;
      
     }
     .intelligentautomationfirst-image1{
@@ -220,7 +220,6 @@ margin-top: 0px !important;
     position: relative;
     margin-top: 100px;
     margin-left: -20px !important;
-    font-family: Source Sans Pro;
 font-size: 48px;
 font-weight: 600;
 line-height: 60.34px;
@@ -326,6 +325,8 @@ color: #676968;
   .img-fluid{
     margin-left: -35px !important;
   }
+
+
   @media (min-width:769px){
     .consulting-service-responsive{
         display:none !important;
@@ -1397,7 +1398,7 @@ margin-top: 10px !important;
 
 .hex span {
   position: relative;
-  color: #fff;
+  color: #fff !important;
   font-weight: bold;
   z-index: 2;
   border-radius: 5px;
@@ -1902,6 +1903,16 @@ margin-top: -20px !important;
   margin-left: 10px !important;
 }
 
+.ourcaseimagemobile{
+display:none !important;
+}
+.ourcaseimageweb{
+display:block !important;
+border-radius: 20px 0px 0px 0px !important;
+margin-left: 0px !important;
+
+
+}
 
 @media screen and (max-width: 768px) {
   .IntelligentAutomation-casestudies-card {
@@ -1912,8 +1923,17 @@ margin-top: -20px !important;
     margin: 10px; /* Add margin-bottom to separate the items */
 }
 
+.ourcaseimagemobile{
+  display:block !important
+  }
+  .ourcaseimageweb{
+    display:none !important;
+
+  }
 .IntelligentAutomation-casestudies-card .row .col-md-6 img {
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 0px 0px 0px !important;
+    margin-left: 0px !important;
+    width: 100% !important;
 }
   .IntelligentAutomation-casestudies h1{
     font-size: 32px;
@@ -2341,6 +2361,7 @@ text-align: left;
   border-radius: 50px;
   opacity: 0px;
 
+
 }
 .about_session10_span {
   line-height: 60.34px;
@@ -2351,7 +2372,7 @@ text-align: left;
   border-radius: 20px;
   overflow: hidden;
 margin-left: -15px !important;
-margin-top: -30px !important;
+/* margin-top: -30px !important; */
 }
 
 .footer h3 {
@@ -2574,7 +2595,8 @@ padding-right: 2px;
 }
 .about_session10_image{
  margin-left: 0 !important;
- margin-top: 5px !important;
+ /* margin-top: 5px !important; */
+ margin-top: -30px !important;
 }
 .about-session__profile{
   margin-left: 0 !important;
