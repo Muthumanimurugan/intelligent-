@@ -246,7 +246,13 @@ text-align: left;
   }
   
   .Intelligent-Automation-services-part-1 {
-    display: flex; 
+    display: flex;
+    
+
+  
+
+   
+    
 }
   .Intelligent-Automation-services-part-1 .one {
     display: inline-block;
@@ -320,12 +326,37 @@ color: #676968;
 }
 
   .overflow-auto::-webkit-scrollbar {
-      display: none;
+    
+
+
   }
   .img-fluid{
     margin-left: -35px !important;
   }
+  
 
+  .Intelligent-Automation-services-part-1 {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    cursor: grab; /* Indicate draggable area */
+}
+
+.Intelligent-Automation-services-part-1::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+.one {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 10px;
+    /* background-color: #f0f0f0;
+    border: 1px solid #ccc; */
+    border-radius: 4px;
+    user-select: none; /* Prevent text selection while dragging */
+}
+
+  
 
   @media (min-width:769px){
     .consulting-service-responsive{
