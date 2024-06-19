@@ -345,7 +345,7 @@ color: #676968;
 .Intelligent-Automation-services-part-1::-webkit-scrollbar {
     display: none; /* Hide scrollbar */
 }
-
+ 
 .one {
     display: inline-block;
     padding: 10px;
@@ -1869,7 +1869,7 @@ border-radius: none !important;
 }
 .IntelligentAutomation-casestudies-button {
 margin-left: 0px !important;
-margin-top: -20px !important;
+/* margin-top: -20px !important; */
 }
 
 .IntelligentAutomation-casestudies-button .btn-primary {
