@@ -456,7 +456,8 @@ document.querySelector('.navbar-toggler').addEventListener('click', function () 
 
         
     </div>
-</div>         
+</div> 
+        
 <script>
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -486,8 +487,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 </script> 
+<script>
+const container = document.querySelector('.Intelligent-Automation-services-part-1');
 
+let isDown = false;
+let startX;
+let scrollLeft;
 
+container.addEventListener('mousedown', (e) => {
+    isDown = true;
+    container.classList.add('active');
+    startX = e.pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+});
+
+container.addEventListener('mouseleave', () => {
+    isDown = false;
+    container.classList.remove('active');
+});
+
+container.addEventListener('mouseup', () => {
+    isDown = false;
+    container.classList.remove('active');
+});
+
+container.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - container.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    container.scrollLeft = scrollLeft - walk;
+});
+</script>
 
 
 
@@ -1186,8 +1217,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="IntelligentAutomation-casestudies-card">
                     <div class="row" >
                         <div class="col-md-6">
-                            <img src="intelligent-images\Computer Vision Automation (2).png" alt="" class="img-fluid ourcaseimageweb"> 
-                            <img class="img-fluid ourcaseimagemobile" src="intelligent-images/Computer Vision Automation (6).png" alt="">
+                            <img src="intelligent-images\Computer Vision Automation (2).png" alt="Computer Vision Automation (2)" class="img-fluid ourcaseimageweb"> 
+                            <img class="img-fluid ourcaseimagemobile" src="intelligent-images/Computer Vision Automation (6).png" alt="Computer Vision Automation (6)">
                         </div>
                         <div class="col-md-6">
                             <p class="IntelligentAutomation-casestudies-p1">Another Case Study</p>
