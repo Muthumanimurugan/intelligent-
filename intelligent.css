@@ -273,7 +273,6 @@ text-align: left;
     width: max-content;
     padding: 5px 10px
   }
-  
   .active-tab {
     font-weight: bold;
     color: #2CA068; 
@@ -315,45 +314,32 @@ color: #676968;
     margin-top: 10px !important;
 
   }
-  
   .hidden-content {
       margin-top: 50px;
   }
-  
   .overflow-auto {
     overflow-x: auto; 
     white-space: nowrap; 
 }
-
-  .overflow-auto::-webkit-scrollbar {
-    
-
-
-  }
   .img-fluid{
     margin-left: -35px !important;
   }
-  
-
   .Intelligent-Automation-services-part-1 {
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
-    cursor: grab; /* Indicate draggable area */
+    cursor: grab;
 }
 
 .Intelligent-Automation-services-part-1::-webkit-scrollbar {
-    display: none; /* Hide scrollbar */
+    display: none;
 }
- 
 .one {
     display: inline-block;
     padding: 10px;
     margin: 0 10px;
-    /* background-color: #f0f0f0;
-    border: 1px solid #ccc; */
     border-radius: 4px;
-    user-select: none; /* Prevent text selection while dragging */
+    user-select: none;
 }
 
   
@@ -801,7 +787,6 @@ text-align: left;
       margin-top: 5px;
       border-radius: 2px;
       background-color: #2CA068;
-      z-index: 99999 !important;
   }
   .section-4 {
       margin-top: 150px !important;
